@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   let [contentTIle, contentFunction] = useState(['title','title2','title3']);
-
+  let [count, countFuncion] = useState(0);
 
   let posts = '제목'
   return (
@@ -13,7 +13,7 @@ function App() {
         <div style={{color:'blue', fontSize:'30px'}}>개발 blog</div>
       </div>
       <div className='list'>
-        <h3>{ contentTIle[0] }</h3>
+        <h3>{ contentTIle[0] } <span onClick={ ()=> {countFuncion(count++)}  }>♡</span> { count }</h3>
         <p>1월 1일 발행</p>
         <hr />
         
