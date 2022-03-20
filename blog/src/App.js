@@ -1,20 +1,30 @@
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-let posts = '내용'
-function 함수(){
-  return 100
-} 
-
 function App() {
+  let [contentTIle, contentFunction] = useState(['title','title2','title3']);
+
+
+  let posts = '제목'
   return (
     <div className="App">
       <div className='black-nav'>
         <div style={{color:'blue', fontSize:'30px'}}>개발 blog</div>
       </div>
-      <img src={ logo } />
-      <h4> { posts } 함수 : {함수()}</h4>
-      test
+      <div className='list'>
+        <h3>{ contentTIle[0] }</h3>
+        <p>1월 1일 발행</p>
+        <hr />
+        
+        <h3>{ contentTIle[1] }</h3>
+        <p>1월 1일 발행</p>
+        <hr />
+        
+        <h3>{ contentTIle[2] }</h3>
+        <p>1월 1일 발행</p>
+        <hr />
+      </div>
     </div>
   );
 }
